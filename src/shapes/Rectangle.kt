@@ -10,6 +10,7 @@ class Rectangle: Drawable, Descriptible {
     override fun draw():String{
         var finalString = ""
         for(i in 1..height){
+            //magia gris
             finalString += "* ".repeat(width)
             finalString += "\n"
         }
@@ -21,7 +22,8 @@ class Rectangle: Drawable, Descriptible {
 
         println("Ingrese el ancho del rectángulo")
         width = readLine()!!.toInt()
-
+        //intentamos convertir el ingreso a int
+        //si falla, mostramos error
         try{
             height = readLine()!!.toInt()
             width = readLine()!!.toInt()
